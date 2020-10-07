@@ -4,9 +4,10 @@ import { BuidlerConfig, usePlugin } from "@nomiclabs/buidler/config";
 usePlugin("buidler-ethers-v5");
 usePlugin("buidler-deploy");
 usePlugin("@blockchangers/buidler-typechain");
-usePlugin(""); // TODO ANCHOR USE our plugin ./plugins/buidler-symfoni-react
+usePlugin("@symfoni/buidler-react"); // TODO ANCHOR USE our plugin ./plugins/buidler-symfoni-react
 
 const config: BuidlerConfig = {
+  defaultNetwork: "dev",
   networks: {
     dev: {
       url: "HTTP://127.0.0.1:8545",
