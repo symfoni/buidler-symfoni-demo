@@ -4,6 +4,7 @@ import { BuidlerConfig, usePlugin } from "@nomiclabs/buidler/config";
 usePlugin("buidler-ethers-v5");
 usePlugin("buidler-deploy");
 usePlugin("@blockchangers/buidler-typechain");
+usePlugin(""); // TODO ANCHOR USE our plugin ./plugins/buidler-symfoni-react
 
 const config: BuidlerConfig = {
   networks: {
@@ -12,12 +13,12 @@ const config: BuidlerConfig = {
     },
   },
   paths: {
-    artifacts: "./dist/artifacts",
+    artifacts: "./frontend/src/buidler/artifacts",
     // "cache": "./.symf/.cache/buidler/cache",
     // "sources": "./.symf/",
     // "tests": "./.symf/tests",
     // deploy: "./deploy",
-    deployments: "./dist/deployments",
+    deployments: "./frontend/src/buidler/deployments",
     // react: "./frontend/src/buidler",
   },
   solc: {
@@ -27,7 +28,7 @@ const config: BuidlerConfig = {
     },
   },
   typechain: {
-    outDir: "./src/typechain",
+    outDir: "./frontend/src/buidler/typechain",
     target: "ethers-v5",
   },
   namedAccounts: {
