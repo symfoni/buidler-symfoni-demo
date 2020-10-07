@@ -12,12 +12,13 @@ const config: BuidlerConfig = {
     },
   },
   paths: {
-    artifacts: "./src/artifacts",
+    artifacts: "./dist/artifacts",
     // "cache": "./.symf/.cache/buidler/cache",
     // "sources": "./.symf/",
     // "tests": "./.symf/tests",
     // deploy: "./deploy",
-    // deployments: "./src/deployments",
+    deployments: "./dist/deployments",
+    // react: "./frontend/src/buidler",
   },
   solc: {
     optimizer: {
@@ -33,6 +34,9 @@ const config: BuidlerConfig = {
     deployer: {
       default: 0,
     },
+  },
+  react: {
+    providerPriority: ["web3modal", "dev", "HTTP://127.0.0.1:8545"],
   },
 };
 export default config;

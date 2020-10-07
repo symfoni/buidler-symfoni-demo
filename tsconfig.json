@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["./scripts", "./test", "./deploy"],
+  "include": ["./scripts", "./test", "./deploy", "./plugins"],
   "files": [
     "./buidler.config.ts",
     "node_modules/buidler-ethers-v5/src/type-extensions.d.ts",

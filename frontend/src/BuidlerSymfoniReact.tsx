@@ -47,14 +47,15 @@ interface Contract {
 const defaultContracts: Contract[] = []
 export const ContractsContext = React.createContext<[Contract[], React.Dispatch<React.SetStateAction<Contract[]>>]>([defaultContracts, () => { }]);
 
-const defaultProvider: providers.Provider = undefined
+
+const defaultProvider: providers.Provider = ethers.providers.getDefaultProvider()
 export const ProviderContext = React.createContext<[providers.Provider, React.Dispatch<React.SetStateAction<providers.Provider>>]>([defaultProvider, () => { }]);
 
 const defaultCurrentAddress: string = ""
 export const CurrentAddressContext = React.createContext<[string, React.Dispatch<React.SetStateAction<string>>]>([defaultCurrentAddress, () => { }]);
 
-const defaultSigner: Signer = undefined
-export const SignerContext = React.createContext<[Signer, React.Dispatch<React.SetStateAction<Signer>>]>([defaultSigner, () => { }]);
+const defaultSigner: Signer | undefined = undefined
+export const SignerContext = React.createContext<[Signer | undefined, React.Dispatch<React.SetStateAction<Signer | undefined>>]>([defaultSigner, () => { }]);
 
 interface Props { }
 
@@ -62,9 +63,9 @@ export const BuidlerSymfoniReact: React.FC<Props> = ({ children }) => {
     const [ready, setReady] = useState(false);
     const [messages, setMessages] = useState<string[]>([]);
     const [providerName, setProviderName] = useState<string>();
-    const [signer, setSigner] = useState<Signer>(defaultSigner);
+    const [signer, setSigner] = useState<Signer | undefined>(defaultSigner);
     const [provider, setProvider] = useState<providers.Provider>(defaultProvider);
-    const [contracts, setContracts] = useState(defaultContracts);
+    const [contracts, setContracts] = useState<Contract[]>(defaultContracts);
     const [currentAddress, setCurrentAddress] = useState<string>(defaultCurrentAddress);
 
     /* functions */
@@ -85,13 +86,13 @@ export const BuidlerSymfoniReact: React.FC<Props> = ({ children }) => {
                             const web3provider = new ethers.providers.Web3Provider(provider);
                             return Promise.resolve(web3provider)
                         } catch (error) {
-                            return Promise.resolve(null)
+                            return Promise.resolve(undefined)
                         }
                     default:
-                        return Promise.resolve(null)
+                        return Promise.resolve(undefined)
                 }
             }
-        }, Promise.resolve(null)) // end reduce
+        }, Promise.resolve(undefined)) // end reduce
 
         return provider
     }
