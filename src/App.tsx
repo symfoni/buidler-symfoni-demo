@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Box, Footer, Grommet, Main, Text } from "grommet";
-import { Me } from './components/Me';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { BuidlerSymfoniReact } from "./BuidlerSymfoniReact";
+import { Me } from './components/Me';
 import { Navigation } from './ui/Navigation';
 
 
@@ -34,7 +34,7 @@ function App() {
             {/* Navigation */}
             <Navigation></Navigation>
             {/* Content swtich */}
-            <Main pad="large">
+            <Main pad="large" height={{ min: "80vh" }} >
               <Switch>
                 <Route exact path="/me">
                   <Me />

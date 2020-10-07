@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext",
+    "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -20,10 +16,7 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    "./scripts",
-    "./test"
-  ],
+  "include": ["./scripts", "./test", "./deploy"],
   "files": [
     "./buidler.config.ts",
     "node_modules/buidler-ethers-v5/src/type-extensions.d.ts",

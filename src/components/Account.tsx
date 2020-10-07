@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react';
 import { Box, Text } from 'grommet';
+import React, { useContext, useEffect } from 'react';
 import { CurrentAddressContext, ProviderContext } from '../BuidlerSymfoniReact';
 
 interface Props { }
 
 export const Account: React.FC<Props> = () => {
-    const [provider, setProvider] = useContext(ProviderContext)
+    const [provider] = useContext(ProviderContext)
     const [address] = useContext(CurrentAddressContext)
 
     useEffect(() => {

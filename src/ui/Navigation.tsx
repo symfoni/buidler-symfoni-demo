@@ -10,7 +10,7 @@ export const Navigation: React.FC<Props> = () => {
     return (
         <Header background="brand" pad="small">
             <Box>
-                <Heading level="1" onClick={() => history.push("/")}>Demo</Heading>
+                <Heading level="1" style={{ cursor: "pointer" }} onClick={() => history.push("/")}>Demo</Heading>
             </Box>
             <Box direction="row" gap="small">
                 <Link to="/me">Me</Link>

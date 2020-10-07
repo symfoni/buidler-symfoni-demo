@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { providers, Signer, ethers, ContractFactory } from "ethers";
 import React, { useEffect, useState } from "react";
 import Web3Modal, { IProviderOptions } from "web3modal";
@@ -41,6 +42,8 @@ interface Contract {
 
 // }
 
+
+/* Contexts */
 const defaultContracts: Contract[] = []
 export const ContractsContext = React.createContext<[Contract[], React.Dispatch<React.SetStateAction<Contract[]>>]>([defaultContracts, () => { }]);
 
@@ -123,6 +126,9 @@ export const BuidlerSymfoniReact: React.FC<Props> = ({ children }) => {
                         }
                     }
                 }
+
+                // contracts
+
 
                 setReady(true)
             }

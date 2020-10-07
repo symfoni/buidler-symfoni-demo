@@ -16,8 +16,8 @@ const config: BuidlerConfig = {
     // "cache": "./.symf/.cache/buidler/cache",
     // "sources": "./.symf/",
     // "tests": "./.symf/tests",
-    // "deploy": "./.symf/.cache/buidler/deploy",
-    // "deployments": "./.symf/.cache/buidler/deployments"
+    // deploy: "./deploy",
+    // deployments: "./src/deployments",
   },
   solc: {
     optimizer: {
