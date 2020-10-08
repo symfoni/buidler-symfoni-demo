@@ -2,10 +2,16 @@ import { Box, Footer, Grommet, Main, Text } from "grommet";
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { BuidlerSymfoniReact } from "./BuidlerSymfoniReact";
-import { Me } from './components/Me';
+import { SimpleStorage } from './components/SimpleStorage';
 import { Navigation } from './ui/Navigation';
+import log from 'loglevel';
 
-
+log.info("App initiated");
+if (process.env.NODE_ENV === "development") {
+  log.setLevel("TRACE", true)
+} else {
+  log.setLevel("INFO")
+}
 function App() {
 
   // useEffect(() => {
@@ -36,8 +42,8 @@ function App() {
             {/* Content swtich */}
             <Main pad="large" height={{ min: "80vh" }} >
               <Switch>
-                <Route exact path="/me">
-                  <Me />
+                <Route exact path="/contracts/SimpleStorage">
+                  <SimpleStorage />
                 </Route>
               </Switch>
             </Main>

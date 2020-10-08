@@ -15,15 +15,16 @@
     "firebase": "^7.21.0",
     "grommet": "^2.15.0",
     "grommet-icons": "^4.4.0",
+    "loglevel": "^1.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "spinners-react": "^1.0.4",
     "styled-components": "^5.2.0",
+    "typescript": "~3.7.2",
     "web3modal": "^1.9.0",
-    "xlsx": "^0.16.7",
-    "typescript": "~3.7.2"
+    "xlsx": "^0.16.7"
   },
   "scripts": {
     "start": "react-scripts start",
