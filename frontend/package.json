@@ -15,7 +15,6 @@
     "firebase": "^7.21.0",
     "grommet": "^2.15.0",
     "grommet-icons": "^4.4.0",
-    "loglevel": "^1.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

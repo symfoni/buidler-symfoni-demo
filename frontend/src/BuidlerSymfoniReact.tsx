@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { providers, Signer, ethers, ContractFactory } from "ethers";
+import { providers, Signer, ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import Web3Modal, { IProviderOptions } from "web3modal";
 import { Box, Text } from "grommet";
