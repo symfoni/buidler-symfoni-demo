@@ -1,4 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our Contribution to the ETHOnline hackathon
+=========================================
+
+### We wish to improve the output of Buidler, and include Textile out of the box.
+
+There are three Github repositories as part of our project. They are all part of the hackathon:
+
+* buidler-symfoni-demo (this project)
+* [buidler-react](https://github.com/symfoni/buidler-react)
+* [buidler-plugins](https://github.com/symfoni/buidler-plugins)
+
+![](https://ethglobal.s3.amazonaws.com/rec9bgGRjbJFSIGFF/MicrosoftTeams-image.png)
+
+### Description
+
+We wish to improve the output of Buidler, and include Textile. We combine Buidler, Buidler plugins and Textile. The developer includes their solidity code, and we generate an react app:
+
+- pluggable react context with contract loading
+- web3modal
+- ethers v5
+- typed interfaces (!)
+- storage context with easy access to Textile
+
+This is so that for application developers, get a good, typed starting point from their contracts. Also it gives them a way to store stuff outside of the blockchain e.g. to solve the GDPR challenges with personal data and blockchain. We also wish to include more storage options i.e. to handle accounts, groups, roles and encryption, and store and retrieve the data fra arbitrary destinations. This is so enterprises can store part of their data on premise.
+
+### How It's Made
+
+We're building an aggregated CLI accross Buidler, Buidler plugins and Textile. This is done in Typescript.
+
+### Team
+
+ [🇳🇴 Jon Ramvi](https://github.com/ramvi/),  [🇳🇴 Robin Pedersen](https://github.com/RobertoSnap),   🇩🇪 Hendrik Bilges
+
+# Development 
+
+This chapter is only relevant if you want to contribute to the project. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
